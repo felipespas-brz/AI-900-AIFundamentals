@@ -1,7 +1,8 @@
 $key="7f654a2521b04e8d89aedf53b1abbbc6"
 $endpoint="https://eastus.api.cognitive.microsoft.com/"
 
-$img = "https://github.com/felipespas-brz/AI-900-AIFundamentals/blob/main/data/vision/Felipe_Andressa.jpg?raw=true"
+# $img = "https://github.com/felipespas-brz/AI-900-AIFundamentals/blob/main/data/vision/Felipe_Andressa.jpg?raw=true"
+$img = "https://github.com/felipespas-brz/AI-900-AIFundamentals/blob/main/data/vision/Felipe_Snowboard.jpg?raw=true"
 
 $headers = @{}
 $headers.Add( "Ocp-Apim-Subscription-Key", $key )
