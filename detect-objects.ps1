@@ -1,5 +1,5 @@
-$predictionUrl="YOUR_PREDICTION_URL"
-$predictionKey = "YOUR_PREDITION_KEY"
+$predictionUrl="https://southcentralus.api.cognitive.microsoft.com/customvision/v3.0/Prediction/50f384d9-1f73-4de0-b4f1-f7e9747964f5/detect/iterations/detect-produce/url"
+$predictionKey = "196c7fbc509e4cc19fa29b959f64c972"
 
 
 
