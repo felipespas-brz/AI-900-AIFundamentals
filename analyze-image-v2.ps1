@@ -1,21 +1,15 @@
 $key="7f654a2521b04e8d89aedf53b1abbbc6"
 $endpoint="https://eastus.api.cognitive.microsoft.com/"
 
-
-# Code to call Computer Vision service for image analysis
-$img_file = "store-camera-1.jpg"
-if ($args.count -gt 0 -And $args[0] -in ("store-camera-1.jpg", "store-camera-2.jpg", "store-camera-3.jpg", "store-camera-4.jpg"))
-{
-    $img_file = $args[0]
-}
-
-$img = "https://raw.githubusercontent.com/MicrosoftLearning/AI-900-AIFundamentals/main/data/vision/$img_file"
+$img = "C:\Users\fassis\Documents\GitHub\AI-900-AIFundamentals\data\vision\Felipe_Andressa.jpg"
 
 $headers = @{}
 $headers.Add( "Ocp-Apim-Subscription-Key", $key )
 $headers.Add( "Content-Type","application/json" )
 
 $body = "{'url' : '$img'}"
+
+$body
 
 write-host "Analyzing image..."
 $result = Invoke-RestMethod -Method Post `
