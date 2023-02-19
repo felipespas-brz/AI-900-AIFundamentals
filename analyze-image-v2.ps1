@@ -1,14 +1,13 @@
 $key="7f654a2521b04e8d89aedf53b1abbbc6"
 $endpoint="https://eastus.api.cognitive.microsoft.com/"
 
-$img = "C:\Users\fassis\Documents\GitHub\AI-900-AIFundamentals\data\vision\Felipe_Andressa.jpg"
+$img = "https://github.com/felipespas-brz/AI-900-AIFundamentals/blob/main/data/vision/Felipe_Andressa.jpg?raw=true"
 
 $headers = @{}
 $headers.Add( "Ocp-Apim-Subscription-Key", $key )
 $headers.Add( "Content-Type","application/json" )
 
 $body = "{'url' : '$img'}"
-
 $body
 
 write-host "Analyzing image..."
