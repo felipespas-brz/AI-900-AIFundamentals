@@ -20,15 +20,11 @@ $data = @{
     )
 } | ConvertTo-Json
 
-$data | ConvertTo-Json -Depth 6
-
 Write-Host("***Detecting Language***")
 $result = Invoke-RestMethod -Method Post `
           -Uri "$endpoint/text/analytics/v3.1/languages" `
           -Headers $headers `
           -Body $data | ConvertTo-Json -Depth 6
-
-$result
 
 $analysis = ($result | ConvertFrom-Json)
 $langName = $analysis.documents.detectedLanguage.name
