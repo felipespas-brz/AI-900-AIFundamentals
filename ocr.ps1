@@ -1,5 +1,5 @@
-$key="YOUR_KEY"
-$endpoint="YOUR_ENDPOINT"
+$key="4c440bf329cc4e599c3ac1e9e20ee8e7"
+$endpoint="https://southcentralus.api.cognitive.microsoft.com/"
 
 
 # Code to call OCR service for text in image analysis
@@ -23,6 +23,9 @@ $result = Invoke-Webrequest -Method Post `
           -Headers $headers `
           -Body $body 
 
+Write-Host "Showing the first API call results..."
+# $result
+
 # Extract the URL from the response of the Read operation
 # to call the API to getting the analysis results 
 $resultUrl = $($result.Headers['Operation-Location'])
@@ -40,6 +43,7 @@ Do {
             -Uri $resultUrl `
             -Headers $resultHeaders | ConvertTo-Json -Depth 10
 
+    # $result
     $analysis = ($result | ConvertFrom-Json)
 } while ($analysis.status -ne "succeeded")
 

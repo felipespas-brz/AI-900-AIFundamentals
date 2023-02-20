@@ -1,7 +1,5 @@
-$key="YOUR_KEY"
-$endpoint="YOUR_ENDPOINT"
-
-
+$key="4c440bf329cc4e599c3ac1e9e20ee8e7"
+$endpoint="https://southcentralus.api.cognitive.microsoft.com/"
 
 # Code to call Face service for face detection
 $img_file = "store-camera-1.jpg"
@@ -17,6 +15,7 @@ $headers.Add( "Ocp-Apim-Subscription-Key", $key )
 $headers.Add( "Content-Type","application/json" )
 
 $body = "{'url' : '$img'}"
+$body
 
 write-host "Analyzing image...`n"
 $result = Invoke-RestMethod -Method Post `
@@ -26,6 +25,7 @@ $result = Invoke-RestMethod -Method Post `
 
 $analysis = ($result | ConvertFrom-Json)
 Write-Host ("`nFrom June 21st 2022, Face service capabilities that return personally identifiable features are restricted.`nSee https://azure.microsoft.com/blog/responsible-ai-investments-and-safeguards-for-facial-recognition/ for details.`nThis code is restricted to returning the location of any faces detected:`n")
+$face
 foreach ($face in $analysis)
 {
     Write-Host("Face location: $($face.faceRectangle)`n")

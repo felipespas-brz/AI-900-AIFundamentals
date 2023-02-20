@@ -1,5 +1,5 @@
-$key="YOUR_KEY"
-$endpoint="YOUR_ENDPOINT"
+$key="4c440bf329cc4e599c3ac1e9e20ee8e7"
+$endpoint="https://southcentralus.api.cognitive.microsoft.com/"
 
 # Code to call Text Analytics service to analyze sentiment in text
 $txt_file = "review1.txt"

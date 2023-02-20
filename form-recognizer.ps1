@@ -1,5 +1,5 @@
-$key="YOUR_KEY"
-$endpoint="YOUR_ENDPOINT"
+$key="4c440bf329cc4e599c3ac1e9e20ee8e7"
+$endpoint="https://southcentralus.api.cognitive.microsoft.com/"
 
 # Create the URL where the raw receipt image can be found
 $img = "https://raw.githubusercontent.com/MicrosoftLearning/AI-900-AIFundamentals/main/data/vision/receipt.jpg"
