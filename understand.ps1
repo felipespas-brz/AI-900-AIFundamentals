@@ -1,7 +1,7 @@
-$endpointUrl="YOUR_ENDPOINT"
-$key = "YOUR_KEY"
-$projectName = "YOUR_PROJECT_NAME"
-$deploymentName = "YOUR_DEPLOYMENT_NAME"
+$endpointUrl="https://southcentralus.api.cognitive.microsoft.com/language/:analyze-conversations?api-version=2022-10-01-preview"
+$key = "3e3204ee2e424eeb8fee09c560dc79a2"
+$projectName = "HomeAutomation01"
+$deploymentName = "HomeAutomation01-Deployment01"
 
 
 if ($args.count -gt 0){
@@ -31,7 +31,7 @@ if ($args.count -gt 0){
     $body.Add( "parameters", $parameters)
    
     $body = $body | ConvertTo-Json
-    
+
     Write-Host "Calling Language model..."
     $response = Invoke-WebRequest -Method Post `
            -Uri $endpointUrl `
