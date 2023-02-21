@@ -1,5 +1,5 @@
-$key="YOUR_KEY"
-$endpoint="YOUR_ENDPOINT"
+$key="35609ad2e79a4203a71c723463b0daff"
+$endpoint="https://southcentralus.api.cognitive.microsoft.com/"
 
 
 # Code to call Anomaly Detector
